@@ -1,0 +1,48 @@
+STO Project - Investor Services Contribution
+Presented by: Prabhakar, Private Reporting Team
+
+Introduction
+Good morning everyone,
+I am Prabhakar from the Private Reporting Team. Today, I am here to provide an overview of the STO (Sell Transfer Originations) project, particularly focusing on the contributions from the Investor Services team.
+For those who might be unfamiliar, the STO project is centered around the selling of FHA (Federal Housing Administration) and VA (Veteran Affairs) loans to third-party entities . The objective of this initiative is to support Servicing De-Risking, thereby improving liquidity by offloading these loan portfolios. The anticipated revenue from this endeavor is approximately $30 million.
+
+Investor Services Contribution
+Our primary role has been to implement the Reconciliation Process, which is structured around three key components:
+	1. User Interface (UI)
+	2. Application Programming Interface (API)
+	3. Web Job
+We were involved in the end-to-end development and deployment of the Web Job, ensuring its seamless integration and operation within the broader STO framework.
+
+
+Process Overview
+At a high level, here is how the process flows:
+	• CMODS sends messages to the Recon system upon receiving data from MCT related to Bids, Trades, and PA.
+	• The Web Job is responsible for processing these messages and subsequently updating the reconciliation status back to CMODS.
+
+
+Focus on Code Quality
+We were determined not to compromise on code quality. Our goal was to achieve 80% code coverage for test cases. Instead of perceiving challenges as obstacles, we embraced them as opportunities. This mindset led us to develop and implement several reusable components, which we made available in GitHub for broader team usage.
+The components include:
+	1. Kafka Publisher: Capable of publishing messages to any Pre-Production environment.
+	2. Kafka Consumer: A foundational framework that can serve as a starting point for Kafka implementation projects.
+	3. Certificate Utility: Extracts Key and PEM information from certificates, simplifying the integration process.
+
+Project Challenges
+We were engaged in this project starting December, facing several critical challenges:
+	• Stringent Timelines: Tight deadlines required efficient planning and execution.
+	• Integration with CMODS: Ensuring smooth data integration with the CMODS system.
+	• Deployment in Azure ASE: This marked the first instance of deploying in Azure ASE (App Service Environment) within Wells Fargo, with no prior references for guidance.
+	• Health Check Setup: Significant differences in configuring health checks between ASE and the public cloud presented a learning curve.
+	• Certificate Handshake with Kafka: Managing secure and reliable communication through certificate exchanges with Kafka.
+
+Leveraging GitHub Copilot
+We extensively utilized GitHub Copilot to enhance productivity and code quality, especially in the following use cases:
+	• Model and Enumeration Generation: Automated the creation of models and enumerations for master data derived from database tables.
+	• Entity Framework Queries: Assisted in crafting queries based on the SQL scripts we designed.
+	• Sample JSON Generation: Facilitated the creation of sample JSON structures for message publishing.
+	• Unit Testing: Helped in writing XUnit test cases while using Moq for mocking dependencies, ensuring robust and isolated tests.
+
+Conclusion
+Overall, this project has been both challenging and enriching. The collaborative effort, combined with the strategic use of modern tools, has strengthened our delivery while contributing valuable, reusable assets for future projects.
+
+Thank you all for your attention. I am open to questions or discussions regarding any aspect of this project.
